@@ -1,8 +1,9 @@
 public class SuperArray{
   private String[] data;
   private int size;
-  public SuperArray(String[] data) {
+  public SuperArray(String[] data, int size) {
     data = new String[10];
+    this.size = size;
   }
   public void clear() {
     size = 0;
@@ -22,5 +23,18 @@ public class SuperArray{
       }
     }
     return true;
+  }
+  public String toString() {
+    String newStr = "";
+    newStr = newStr + "[";
+    for (int i=0; i<data.length; i++) {
+      if (i<data.length-1) {
+        newStr = newStr + data[i] + ", ";
+      }
+      else {
+        newStr = newStr + data[i] + "]";
+      }
+    }
+    return newStr;
   }
 }
