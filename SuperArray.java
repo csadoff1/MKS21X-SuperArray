@@ -21,6 +21,7 @@ public class SuperArray{
           data[i] = a;
         }
       }
+      size++;
     }
     return true;
   }
