@@ -42,7 +42,7 @@ public class SuperArray{
     return true;
   }
 
-  public String toString() {
+  public String toStringDebug() {
     String newStr = "";
     newStr = newStr + "[";
     for (int i=0; i<data.length; i++) {
