@@ -42,6 +42,20 @@ public class SuperArray{
     return true;
   }
 
+  public String toString() {
+    String newStr = "";
+    newStr = newStr + "[";
+    for (int i=0; i<size; i++) {
+      if (i<size-1) {
+        newStr = newStr + data[i] + ", ";
+      }
+      else {
+        newStr = newStr + data[i] + "]";
+      }
+    }
+    return newStr;
+  }
+
   public String toStringDebug() {
     String newStr = "";
     newStr = newStr + "[";
@@ -67,7 +81,7 @@ public class SuperArray{
 
   public String set(int i, String str) {
     if (i < 0 || i >= size()) {
-      return null;
+      return "Error";
     }
     else {
       data[i] = str;
