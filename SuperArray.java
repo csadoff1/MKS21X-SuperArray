@@ -29,6 +29,16 @@ public class SuperArray{
       }
       size++;
     }
+    else {
+      this.resize();
+      for (int i=0; i<data.length; i++) {
+        if (data[i] == null) {
+          data[i] = a;
+          break;
+        }
+      }
+      size++;
+    }
     return true;
   }
 
