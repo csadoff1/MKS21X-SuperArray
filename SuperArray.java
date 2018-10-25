@@ -38,4 +38,12 @@ public class SuperArray{
     }
     return newStr;
   }
+  public String get(int i) {
+    if (i < 0 || i >= size()) {
+      return null;
+    }
+    else {
+      return data[i];
+    }
+  }
 }
