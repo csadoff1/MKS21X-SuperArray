@@ -4,7 +4,7 @@ public class SuperArray{
 
   public SuperArray() {
     data = new String[10];
-    this.size = size;
+    size = 0;
   }
 
   public void clear() {
@@ -63,6 +63,13 @@ public class SuperArray{
       data[i] = str;
     }
     return data[i];
+  }
+
+  private void resize() {
+    SuperArray newData = new SuperArray();
+    
+
+    data = newData;
   }
 
 }
