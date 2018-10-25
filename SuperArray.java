@@ -97,4 +97,14 @@ public class SuperArray{
     data = newData;
   }
 
+  public boolean contains(String target) {
+    boolean contain = false;
+    for (int i=0; i<data.length; i++) {
+      if (data[i].equals(target)) {
+        contain = true;
+      }
+    }
+    return contain;
+  }
+
 }
