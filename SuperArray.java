@@ -151,8 +151,12 @@ public class SuperArray{
     }
       data[a] = element;
     }
+    size++;
   }
 
-
+  public String remove(int a) {
+    String orig = data[a];
+    
+  }
 
 }
