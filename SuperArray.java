@@ -8,6 +8,8 @@ public class SuperArray{
   }
 
   public void clear() {
+    String[] newData = new String[data.length];
+    data = newData;
     size = 0;
   }
 
@@ -141,5 +143,7 @@ public class SuperArray{
       }
     }
   }
+
+
 
 }
