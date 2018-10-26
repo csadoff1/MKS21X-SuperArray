@@ -103,14 +103,12 @@ public class SuperArray{
   }
 
   public boolean contains(String target) {
-    boolean contain = false;
-    for (int i=0; i<data.length; i++) {
+    for (int i=0; i<size(); i++) {
       if (data[i].equals(target)) {
-        contain = true;
-        break;
+        return true;
       }
     }
-    return contain;
+    return false;
   }
 
   public int indexOf(String element) {
