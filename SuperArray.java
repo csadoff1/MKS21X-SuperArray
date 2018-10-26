@@ -82,13 +82,16 @@ public class SuperArray{
   }
 
   public String set(int i, String str) {
+    String orig = "";
     if (i < 0 || i >= size()) {
-      return "Error";
+      System.err.println ("Error: index out of range");
+      return null;
     }
     else {
+      orig = data[i];
       data[i] = str;
     }
-    return data[i];
+    return orig;
   }
 
   private void resize() {
