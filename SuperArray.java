@@ -158,6 +158,7 @@ public class SuperArray{
     String orig = data[a];
     if (a < 0 || a >= size()) {
       System.err.println("Error: index out of range");
+      return null;
     }
     else {
       for (int i=a+1; i<data.length; i++) {
@@ -166,5 +167,7 @@ public class SuperArray{
     }
     return orig;
   }
+
+  public boolean
 
 }
