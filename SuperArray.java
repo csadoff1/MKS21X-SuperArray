@@ -131,6 +131,10 @@ public class SuperArray{
   }
 
   public void add(int a, String element) {
+    if (a < 0 || a > size()) {
+      System.out.println ("Error");
+    }
+    else {
     if (size >= data.length) {
       this.resize();
       for (int i=this.size(); i<data.length-1; i++) {
@@ -141,6 +145,7 @@ public class SuperArray{
       for (int i=this.size(); i<data.length-1; i++) {
         data[i+1] = data[i];
       }
+    }
     }
   }
 
