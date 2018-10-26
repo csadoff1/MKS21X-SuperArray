@@ -128,4 +128,18 @@ public class SuperArray{
     return index;
   }
 
+  public void add(int a, String element) {
+    if (size >= data.length) {
+      this.resize();
+      for (int i=this.size(); i<data.length-1; i++) {
+        data[i+1] = data[i];
+      }
+    }
+    else if (size < data.length) {
+      for (int i=this.size(); i<data.length-1; i++) {
+        data[i+1] = data[i];
+      }
+    }
+  }
+
 }
