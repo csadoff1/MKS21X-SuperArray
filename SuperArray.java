@@ -107,6 +107,7 @@ public class SuperArray{
     for (int i=0; i<data.length; i++) {
       if (data[i].equals(target)) {
         contain = true;
+        break;
       }
     }
     return contain;
