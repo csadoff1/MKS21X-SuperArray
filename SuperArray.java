@@ -168,6 +168,9 @@ public class SuperArray{
     return orig;
   }
 
-  public boolean
+  public boolean remove(String element) {
+      this.remove(indexOf(element));
+      return true;
+  }
 
 }
