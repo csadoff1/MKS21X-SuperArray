@@ -135,7 +135,7 @@ public class SuperArray{
 
   public void add(int a, String element) {
     if (a < 0 || a > size()) {
-      System.out.println ("Error");
+      System.err.println ("Error: index out of range");
     }
     else {
     if (size >= data.length) {
@@ -156,7 +156,9 @@ public class SuperArray{
 
   public String remove(int a) {
     String orig = data[a];
-    
+    if (index < 0 || index >= size()) {
+      System.err.println("Error: index out of range")
+    }
   }
 
 }
