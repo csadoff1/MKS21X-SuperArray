@@ -137,7 +137,7 @@ public class SuperArray{
     else {
     if (size >= data.length) {
       this.resize();
-      for (int i=this.size(); i<data.length-1; i++) {
+      for (int i=a; i<data.length-1; i++) {
         data[i+1] = data[i];
       }
     }
@@ -146,6 +146,7 @@ public class SuperArray{
         data[i+1] = data[i];
       }
     }
+      data[a] = element;
     }
   }
 
