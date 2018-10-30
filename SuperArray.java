@@ -8,7 +8,8 @@ public class SuperArray{
   }
 
   public SuperArray(int startingCapacity) {
-
+    data = new String[startingCapacity];
+    size = 0;
   }
 
   public void clear() {
@@ -138,7 +139,7 @@ public class SuperArray{
 
   public void add(int a, String element) {
     if (a < 0 || a > size()) {
-      System.err.println ("Error: index out of range");
+      throw new IndexOutOfBoundsException("added to invalid index");
     }
     else {
     if (size >= data.length) {
