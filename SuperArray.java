@@ -79,7 +79,7 @@ public class SuperArray{
 
   public String get(int i) {
     if (i < 0 || i >= size()) {
-      return null;
+      throw new IndexOutOfBoundsException("get from invalid index");
     }
     else {
       return data[i];
@@ -89,8 +89,7 @@ public class SuperArray{
   public String set(int i, String str) {
     String orig = "";
     if (i < 0 || i >= size()) {
-      System.err.println ("Error: index out of range");
-      return null;
+      throw new IndexOutOfBoundsException("set to invalid index");
     }
     else {
       orig = data[i];
