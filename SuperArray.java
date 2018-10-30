@@ -161,8 +161,7 @@ public class SuperArray{
   public String remove(int a) {
     String orig = data[a];
     if (a < 0 || a >= size()) {
-      System.err.println("Error: index out of range");
-      return null;
+      throw new IndexOutOfBoundsException("removed from invalid index");
     }
     else {
       for (int i=a+1; i<data.length; i++) {
