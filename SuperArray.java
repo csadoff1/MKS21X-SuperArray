@@ -26,24 +26,13 @@ public class SuperArray{
   }
 
   public boolean add(String a) {
-    if (size < data.length) {
-      for (int i=0; i<data.length; i++) {
-        if (data[i] == null) {
-          data[i] = a;
-          break;
-        }
-      }
+    if (data.length<size) {
+      data[size]=a;
       size++;
     }
     else {
       this.resize();
-      for (int i=0; i<data.length; i++) {
-        if (data[i] == null) {
-          data[i] = a;
-          break;
-        }
-      }
-      size++;
+      add(a);
     }
     return true;
   }
