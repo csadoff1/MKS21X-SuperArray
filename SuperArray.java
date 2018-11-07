@@ -1,15 +1,16 @@
 public class SuperArray{
   private String[] data;
-  private int size;
+  private int size=0;
 
   public SuperArray() {
     data = new String[10];
-    size = 0;
   }
 
   public SuperArray(int startingCapacity) {
+    if (startingCapacity < 0){
+      throw new IllegalArgumentException();
+    }
     data = new String[startingCapacity];
-    size = 0;
   }
 
   public void clear() {
