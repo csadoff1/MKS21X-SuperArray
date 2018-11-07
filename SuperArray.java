@@ -123,7 +123,7 @@ public class SuperArray{
 
   public void add(int a, String element) {
     if (a < 0 || a > size()) {
-      throw new IndexOutOfBoundsException("added to invalid index");
+      throw new IndexOutOfBoundsException();
     }
     else {
     if (size >= data.length) {
@@ -145,7 +145,7 @@ public class SuperArray{
   public String remove(int a) {
     String orig = data[a];
     if (a < 0 || a >= size()) {
-      throw new IndexOutOfBoundsException("removed from invalid index");
+      throw new IndexOutOfBoundsException();
     }
     else {
       for (int i=a+1; i<data.length; i++) {
