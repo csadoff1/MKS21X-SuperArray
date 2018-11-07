@@ -67,7 +67,7 @@ public class SuperArray{
 
   public String get(int i) {
     if (i < 0 || i >= size()) {
-      throw new IndexOutOfBoundsException("get from invalid index");
+      throw new IndexOutOfBoundsException();
     }
     else {
       return data[i];
@@ -77,7 +77,7 @@ public class SuperArray{
   public String set(int i, String str) {
     String orig = "";
     if (i < 0 || i >= size()) {
-      throw new IndexOutOfBoundsException("set to invalid index");
+      throw new IndexOutOfBoundsException();
     }
     else {
       orig = data[i];
@@ -104,14 +104,12 @@ public class SuperArray{
   }
 
   public int indexOf(String element) {
-    int index = -1;
     for (int i=0; i<data.length; i++) {
       if (data[i].equals(element)) {
-        index=i;
-        break;
+        return i;
       }
     }
-    return index;
+    return -1;
   }
 
   public int lastIndexOf(String element) {
