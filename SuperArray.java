@@ -113,13 +113,12 @@ public class SuperArray{
   }
 
   public int lastIndexOf(String element) {
-    int index = -1;
     for (int i=0; i<data.length; i++) {
       if (data[i].equals(element)) {
-        index=i;
+        return i;
       }
     }
-    return index;
+    return -1;
   }
 
   public void add(int a, String element) {
